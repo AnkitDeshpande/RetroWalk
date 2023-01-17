@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: futura-pt, sans-serif;
+}
+.flex {
+  display: flex;
+}
+.faq {
+  justify-content: end;
+  align-items: center;
+  height: 30px;
+}
+.faq > div {
+  display: flex;
+  color: #666666;
+  border: 0.1px solid rgb(186, 186, 186);
+  border-bottom: none;
+  padding: 0px 15px;
+  align-items: center;
+  height: 100%;
+}
+.faq img {
+  width: 25px;
+  height: 22px;
+}
+.content {
+  width: 85%;
+  height: 60px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #2d2d2d;
+  color: white;
+}
+#navbar{
+    display: flex;
+    background-color: #2d2d2d;
+}
+.logo {
+  width: 66px;
+  height: 100%;
+  color: white;
+}
+.women *,
+.men * {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.searchbar {
+  width: 773px;
+  height: 40px;
+  padding-left: 10px;
+  border-radius: 20px;
+}
+.cartlogin{
+    width: 260px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cartlogin img{
+  width: 40px;
+  height: 25px;
+}
+#category{
+    height: 50px;
+    background-color: #525050;
+    justify-content: space-around;
+    padding: 0px 40px;
+}
+#category button{
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    margin: auto;
+}
+.italic{
+    transform: skew(-12deg);
+}
+#bannersforsales1 {
+    background-image: url("https://content.asos-media.com/-/media/homepages/unisex/homepages/2021/10-oct/cbs-creative-pack/gradient/1_dt_2880x850px.jpg");
+    text-align: center;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-weight: 900;
+    color: rgb(57, 57, 57);
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+.social-links {
+  align-items: center;
+  justify-content: center;
+}
+.social-links > ul {
+  width: 30px;
+  height: 30px;
+  /* border: 1px solid black; */
+}
+.footerdiv {
+  background-color: #eeeeee;
+  justify-content: space-around;
+}
+.footerdiv h4 {
+  color: #666666;
+  font-size: 14px;
+}
+.footerdiv a {
+  text-decoration: none;
+  color: #666666;
+  font-size: 14px;
+}
