@@ -4,7 +4,7 @@
   font-family: "Jost", sans-serif;
 }
 body {
-  background: #516f90;
+  background: #212121;
 }
 .flex {
   display: flex;
@@ -156,7 +156,6 @@ body {
 }
 #product-container {
   width: 95%;
-  /* background-color: #790303; */
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin: auto;
@@ -169,13 +168,16 @@ body {
   margin-bottom: 20px;
   padding-bottom: 7px;
   text-align: center;
-  background: #212121;
-  color: white;
+  border-radius: 5px;
+  background: rgb(172, 247, 247);
+  color: #212121;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   /* border: 1px solid black; */
 }
 #product-container img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   width: 100%;
 }
 #product-container p {
