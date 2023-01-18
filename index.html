@@ -7,7 +7,8 @@
     <title>Shop Women’s Clothes | Latest Trends &amp; Online Fashion | Retro-Walk</title>
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
-  </head>
+   
+    </head>
   <body>
     <div id="main-content">
       <div class="faq flex">
@@ -55,19 +56,34 @@
         <button>New in</button>
         <button>Clothing</button>
         <button>Dresses</button>
-        <button>Plus size</button>
         <button>Shoes</button>
-        <button>Activewear</button>
-        <button>Brands</button>
-        <button>Accessories</button>
+        <button  class="italic" style="background-color: #d01345;">Brands</button>
         <button>Winter</button>
-        <button>Face + Body</button>
-        <button>Topshop</button>
-        <button class="italic" style="background-color: #d01345;">Outlet</button>
+        <button>Outlet</button>
         <button>Martketplace</button>
       </div>
       <div id="bannersforsales1" class="flex">
        <p> STUDENTS: TAKE 15% OFF WITH YOUR CODE!*<br>(LIMITED TIME ONLY)<br> GET YOUR CODE</p>
+      </div>
+
+      <select id="filter">
+        <option value="">Filter By Category</option>
+        <option value="Beauty">Beauty</option>
+        <option value="Shoes">Shoes</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Sports">Sports</option>
+        <option value="Health">Health</option>
+        <option value="Laptop">Laptop</option>
+        <option value="Mobile">Mobile</option>
+        <option value="Speakers">Speakers</option>
+        <option value="Speakers">Automotive</option>
+        <option value="Outdoors">Outdoors</option>
+        <option value="Games">Games</option>
+        <option value="Garden">Garden</option>
+      </select>
+
+      <div id="product-container">
+        <!-- append all products here. -->
       </div>
       <div class="social-links flex">
         <ul><a href="https://www.facebook.com/ASOS/" target="_blank"><img src="assets/fb.svg" alt=""></a></ul>
@@ -103,11 +119,7 @@
             <p><a href="" target="_blank">Black Friday</a></p>
             <p><a href="" target="_blank">Refer A Friend</a></p>
         </div>
-        <div>
-            <h4> SHOPPING FROM</h4>
-            <p><a href="" target="_blank">You're in</a></p>
-            <input type="dropdown">
-        </div>
       </footer>
   </body>
 </html>
+ <script src="./scripts/index.js"></script>

@@ -107,6 +107,9 @@
       border: none;
       margin: auto;
   }
+  .hidden{
+    display: none;
+  }
   .italic{
       transform: skew(-12deg);
   }
