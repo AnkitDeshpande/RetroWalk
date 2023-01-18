@@ -1,6 +1,8 @@
 let cont = document.getElementById("product-container");
 let filterBy = document.getElementById("filter");
 let cartArr = JSON.parse(localStorage.getItem("cart")) || [];
+let court = document.querySelector(".carousel");
+const searchInput = document.querySelector(".search__input");
 
 async function getData() {
   try {
@@ -77,3 +79,4 @@ function checkduplicate(product) {
   }
   return false;
 }
+// searchbar functionality

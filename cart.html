@@ -4,35 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/RetroWalk/css/menpage.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
       rel="stylesheet" />
+    <title>Cart Page</title>
   </head>
   <body>
     <div id="navbar">
       <div class="content flex">
         <div>
-          <a href="index.html"
+          <a href="/RetroWalk/index.html"
             ><img src="assets/logo.png" alt="" class="logo"
           /></a>
         </div>
         <div class="women"><a href="/RetroWalk/index.html">WOMEN</a></div>
-        <div class="men"><a href="">MEN</a></div>
+        <div class="men"><a href="/RetroWalk/menpage.html">MEN</a></div>
         <div class="search">
           <input
             type="text"
             class="search__input"
-            placeholder="Type your text" />
-          <button class="search__button">
-            <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
-              <g>
-                <path
-                  d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
-              </g>
-            </svg>
-          </button>
+            placeholder="Search for items and brands" />
         </div>
       </div>
       <div class="cartlogin flex">
@@ -45,27 +37,17 @@
           <a href=""><img class="likedlogo" src="assets/like.svg" alt="" /></a>
         </div>
         <div class="cart">
-          <a href="/RetroWalk/cart.html"
+          <a href="./cart.html"
             ><img src="assets/cart.svg" alt="" class="cartlogo"
           /></a>
         </div>
       </div>
     </div>
-    <div id="category" class="flex">
-      <button class="italic" style="background-color: #d01345">Sale</button>
-      <button>New in</button>
-      <button>Clothing</button>
-      <button>Dresses</button>
-      <button>Plus size</button>
-      <button>Shoes</button>
-      <button>Activewear</button>
-      <button>Brands</button>
-      <button>Accessories</button>
-      <button>Winter</button>
-      <button>Face + Body</button>
-      <button>Topshop</button>
-      <button class="italic" style="background-color: #d01345">Outlet</button>
-      <button>Martketplace</button>
+    <h1 id="total">
+      Your Total cart Price is:- ₹<span id="cart-total">0</span>
+    </h1>
+    <div id="cart-container">
+      <!-- Here Append All the cart Products  -->
     </div>
     <footer class="footerdiv flex">
       <div>
@@ -94,4 +76,5 @@
       </div>
     </footer>
   </body>
+  <script src="./scripts/cart.js"></script>
 </html>
