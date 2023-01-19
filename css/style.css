@@ -6,6 +6,7 @@
 body {
   background: #212121;
 }
+
 .flex {
   display: flex;
 }
@@ -52,6 +53,32 @@ body {
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 2px;
+}
+.men:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d01345;
+  width: 7%;
+  height: 100%;
+}
+.login:hover,
+.likeditems:hover,
+.cart:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d01345;
+  width: 25%;
+  height: 100%;
+}
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d01345;
+  width: 8%;
+  height: 100%;
 }
 .search {
   display: flex;
@@ -157,7 +184,7 @@ body {
 #product-container {
   width: 95%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin: auto;
 }
 #product-container > div {

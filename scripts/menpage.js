@@ -1,25 +1,23 @@
+let api =
+  "https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-tech-products";
 let cont = document.getElementById("product-container");
 let filterBy = document.getElementById("filter");
 let cartArr = JSON.parse(localStorage.getItem("cart")) || [];
-let court = document.querySelector(".carousel");
-const searchInput = document.querySelector(".search__input");
 
-async function getData() {
+async function fetchdata() {
   try {
-    const response = await fetch(
-      "https://63c791ce5c0760f69ab9abcc.mockapi.io/product"
-    );
-    const data = await response.json();
-    console.log(data);
-    filterdata(data);
+    let res = await fetch(api);
+    res = await res.json();
+    console.log(res);
+    filterdata(res.data);
   } catch (error) {
-    console.error(error);
+    console.log(error);
   }
 }
-getData();
+fetchdata();
 
 filterBy.addEventListener("change", () => {
-  getData();
+  fetchdata();
 });
 function filterdata(data) {
   let filterValue = filterBy.value;
@@ -28,7 +26,6 @@ function filterdata(data) {
     displayproduct(data);
   } else {
     data = data.filter((product) => {
-      //it will return boolean value;
       return product.category == filterValue;
     });
     displayproduct(data);
@@ -41,7 +38,7 @@ function displayproduct(data) {
     let cardEl = document.createElement("div");
     let imgEl = document.createElement("img");
     let brandEl = document.createElement("h3");
-    let categoryEl = document.createElement("h6");
+    let categoryEl = document.createElement("p");
     let detailEl = document.createElement("p");
     let priceEl = document.createElement("h4");
     let addToCart = document.createElement("button");
@@ -53,7 +50,6 @@ function displayproduct(data) {
     categoryEl.textContent = element.category;
     addToCart.textContent = "Add To Cart";
 
-    // adding events to button "Add to cart" here:-
     addToCart.addEventListener("click", () => {
       if (checkduplicate(element)) {
         alert("Product Already in Cart");
@@ -64,13 +60,11 @@ function displayproduct(data) {
       }
     });
 
-    // appending contents
     cardEl.append(imgEl, brandEl, priceEl, detailEl, categoryEl, addToCart);
     cont.append(cardEl);
   });
 }
 
-//check if product is already in cart.
 function checkduplicate(product) {
   for (let i = 0; i < cartArr.length; i++) {
     if (cartArr[i].id === product.id) {
@@ -79,4 +73,3 @@ function checkduplicate(product) {
   }
   return false;
 }
-// searchbar functionality

@@ -19,10 +19,10 @@ function displayproduct(data) {
     let remove = document.createElement("button");
     remove.setAttribute("id", "btn");
 
-    imgEl.src = element.iamge;
-    brandEl.textContent = element.name;
+    imgEl.src = element.img;
+    brandEl.textContent = element.brand;
     priceEl.textContent = `₹` + element.price;
-    detailEl.textContent = element.desc;
+    detailEl.textContent = element.details;
     categoryEl.textContent = element.category;
     quantityEl.textContent = element.quantity;
     increment.textContent = "+";
@@ -50,7 +50,6 @@ function displayproduct(data) {
       displayproduct();
     });
 
-    // appending contents
     cardEl.append(
       imgEl,
       brandEl,
@@ -64,11 +63,14 @@ function displayproduct(data) {
     cont.append(cardEl);
   });
 
-  //calculating total price;
   let sum = 0;
   for (let i = 0; i < cart.length; i++) {
     sum += cart[i].price * cart[i].quantity;
   }
   let total = document.getElementById("cart-total");
   total.textContent = sum;
+}
+
+function placed() {
+  alert("Yay !! Your Order has been placed!");
 }
