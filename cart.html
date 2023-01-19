@@ -10,7 +10,6 @@
       rel="stylesheet" />
     <title>Cart Page</title>
   </head>
-  <body>
     <div id="navbar">
       <div class="content flex">
         <div>
@@ -36,7 +35,7 @@
         <div class="likeditems">
           <a href=""><img class="likedlogo" src="assets/like.svg" alt="" /></a>
         </div>
-        <div class="cart">
+        <div class="cart active">
           <a href="./cart.html"
             ><img src="assets/cart.svg" alt="" class="cartlogo"
           /></a>
@@ -48,6 +47,14 @@
     </h1>
     <div id="cart-container">
       <!-- Here Append All the cart Products  -->
+    </div>
+    <div class="btndiv">
+    <button class="learn-more" onclick="placed();">
+      <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+      </span>
+      <span class="button-text">Check Out</span>
+    </button>
     </div>
     <footer class="footerdiv flex">
       <div>
