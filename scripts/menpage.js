@@ -3,13 +3,17 @@ let api =
 let cont = document.getElementById("product-container");
 let filterBy = document.getElementById("filter");
 let cartArr = JSON.parse(localStorage.getItem("cart")) || [];
+let searchbtn = document.querySelector(".search__button");
+let searchinput = document.querySelector(".search__input");
+let data;
 
 async function fetchdata() {
   try {
     let res = await fetch(api);
     res = await res.json();
     console.log(res);
-    filterdata(res.data);
+    data = res.data;
+    filterdata(data);
   } catch (error) {
     console.log(error);
   }
@@ -73,3 +77,18 @@ function checkduplicate(product) {
   }
   return false;
 }
+
+searchbtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  let searchParams = searchinput.value;
+  let filtered = data.filter((element) => {
+    if (
+      element.brand.toUpperCase().includes(searchParams.toUpperCase()) === true
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  displayproduct(filtered);
+});

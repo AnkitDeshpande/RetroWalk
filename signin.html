@@ -1,69 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
     <title>Sign up / Login Form</title>
-    <link rel="stylesheet" href="./css/signin.css" />
+    <link rel="stylesheet" type="text/css" href="./css/signin.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
+      rel="stylesheet" />
   </head>
   <body>
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <title>Slide Navbar</title>
-        <link rel="stylesheet" type="text/css" href="./css/signin.css" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
-          rel="stylesheet" />
-      </head>
-      <body>
-        <div class="main">
-          <input type="checkbox" id="chk" aria-hidden="true" />
-          <div class="signup">
-            <form id="signupform">
-              <label for="chk" aria-hidden="true">Sign up</label>
-              <input
-                type="text"
-                name="txt"
-                placeholder="User name"
-                required=""
-                id="name" />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                required=""
-                id="email" />
-              <input
-                type="password"
-                name="pswd"
-                placeholder="Password"
-                required=""
-                id="password" />
-              <button>Sign up</button>
-            </form>
-          </div>
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true" />
+      <div class="signup">
+        <form id="signupform">
+          <label for="chk" aria-hidden="true">Sign up</label>
+          <input
+            type="text"
+            name="txt"
+            placeholder="User name"
+            required=""
+            id="name" />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required=""
+            id="email" />
+          <input
+            type="password"
+            name="pswd"
+            placeholder="Password"
+            required=""
+            id="password" />
+          <button id="signup">Sign up</button>
+        </form>
+      </div>
 
-          <div class="login">
-            <form id="loginform">
-              <label for="chk" aria-hidden="true">Login</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                required=""
-                id="signin-email" />
-              <input
-                type="password"
-                name="pswd"
-                placeholder="Password"
-                required=""
-                id=" signin-password" />
-              <button>Login</button>
-            </form>
-          </div>
-        </div>
-      </body>
-    </html>
+      <div class="login">
+        <form id="loginform">
+          <label for="chk" aria-hidden="true">Login</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required=""
+            id="signin-email" />
+          <input
+            type="password"
+            name="pswd"
+            placeholder="Password"
+            required=""
+            id=" signin-password" />
+          <button id="signin">Login</button>
+        </form>
+      </div>
+    </div>
   </body>
-  <script src="/RetroWalk/scripts/signin.js"></script>
 </html>
+<script src="./scripts/signin.js"></script>

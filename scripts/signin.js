@@ -1,42 +1,28 @@
-let signEl = document.getElementById("signupform");
+let signupBtn = document.querySelector("#signup");
+signupBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  let name = document.querySelector("#name").value;
+  let email = document.querySelector("#email").value;
+  let password = document.querySelector("#password").value;
 
-signEl.addEventListener("submit", (event) => {
-  event.preventDefault();
-  //get all id's :-->
+  let newUser = { name: name, email: email, password: password };
 
-  let nameEl = document.getElementById("name");
-  console.log(nameEl);
-  let emailEl = document.getElementById("email");
-  let passwordEl = document.getElementById("password");
-  let obj = {
-    name: nameEl.value,
-    email: emailEl.value,
-    password: passwordEl.value,
-  };
-  let accountData = JSON.parse(localStorage.getItem("account-data")) || [];
-  accountData.push(obj);
-  localStorage.setItem("account-data", JSON.stringify(accountData));
-
-  alert("Signup Successful");
+  localStorage.setItem("user", JSON.stringify(newUser));
+  alert("Signup successful! Welcome " + name);
 });
 
-// let email = document.getElementById("signin-email");
-// let password = document.getElementById("signin-password");
+let loginBtn = document.querySelector("#signin");
+let storedUser = JSON.parse(localStorage.getItem("user"));
+console.log(storedUser);
+//Login functionality
+// loginBtn.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   let email = document.querySelector("#signin-email").value;
+//   let password = document.querySelector("#signin-password").value;
 
-// let accountData = JSON.parse(localStorage.getItem("account-data")) || [];
-
-// loginform.addEventListener("submit", (event) => {
-//   event.preventDefault();
-
-//   let filtered = accountData.filter(
-//     (d) => d.email == email.value && d.password == password.value
-//   );
-
-//   if (filtered.length > 0) {
-//     alert("login successful");
+//   if (storedUser.email === email && storedUser.password == password) {
+//     alert("Login successful! Welcome back " + storedUser.name);
 //   } else {
-//     alert("Wrong credentials");
+//     alert("Wrong credentials. Please try again.");
 //   }
 // });
-
-//
