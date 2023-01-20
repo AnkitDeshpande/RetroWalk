@@ -1,15 +1,16 @@
 let cont = document.getElementById("product-container");
 let filterBy = document.getElementById("filter");
 let cartArr = JSON.parse(localStorage.getItem("cart")) || [];
-let court = document.querySelector(".carousel");
-const searchInput = document.querySelector(".search__input");
+let searchbtn = document.querySelector(".search__button");
+let searchinput = document.querySelector(".search__input");
+let data;
 
 async function getData() {
   try {
     const response = await fetch(
       "https://63c791ce5c0760f69ab9abcc.mockapi.io/product"
     );
-    const data = await response.json();
+    data = await response.json();
     console.log(data);
     filterdata(data);
   } catch (error) {
@@ -79,4 +80,19 @@ function checkduplicate(product) {
   }
   return false;
 }
+
 // searchbar functionality
+searchbtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  let searchParams = searchinput.value;
+  let filtered = data.filter((element) => {
+    if (
+      element.brand.toUpperCase().includes(searchParams.toUpperCase()) === true
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  displayproduct(filtered);
+});
