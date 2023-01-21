@@ -72,5 +72,5 @@ function displayproduct(data) {
 }
 
 function placed() {
-  alert("Yay !! Your Order has been placed!");
+  location.href = "signin.html";
 }
