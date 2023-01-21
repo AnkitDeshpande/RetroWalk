@@ -269,3 +269,37 @@ button:hover .button-text {
   color: #666666;
   font-size: 14px;
 }
+@media only screen and (max-width: 600px) {
+  #navbar {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #category {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #total {
+    margin-left: 0;
+  }
+  #cart-container {
+    grid-template-columns: 50% 50%;
+  }
+  .search {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #category button {
+    width: 80%;
+  }
+  #cart-container > div img {
+    height: 150px;
+  }
+  #cart-container > div p {
+    height: 100px;
+  }
+  .search {
+    display: none;
+  }
+}

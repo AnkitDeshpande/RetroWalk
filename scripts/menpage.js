@@ -92,3 +92,17 @@ searchbtn.addEventListener("click", (e) => {
   });
   displayproduct(filtered);
 });
+
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+  button.addEventListener("mouseover", (e) => {
+    const content = e.target.querySelector(".btncontent");
+    content.style.display = "block";
+  });
+  button.addEventListener("mouseout", (e) => {
+    if (!e.relatedTarget || !e.relatedTarget.closest("button")) {
+      const content = e.target.querySelector(".btncontent");
+      content.style.display = "none";
+    }
+  });
+});
