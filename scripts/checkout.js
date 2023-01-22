@@ -27,4 +27,5 @@ deliveryForm.addEventListener("submit", (e) => {
     JSON.stringify(storedDeliveryDetails)
   );
   alert("Your order has been placed!");
+  location.href = "/index.html";
 });
